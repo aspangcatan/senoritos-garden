@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senorita Garden</title>
+    <title>Senorito's Garden</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -23,40 +23,94 @@
 <body class="bg-gray-100">
 <!-- Navbar -->
 <nav id="navbar" class="fixed top-0 left-0 w-full transition-all duration-500 bg-transparent text-white py-4 px-6 flex justify-between items-center z-50">
-    <h1 class="text-2xl font-bold">Senorita Garden</h1>
+    <h1 class="text-2xl font-bold">Senorito's Garden</h1>
     <ul class="hidden md:flex space-x-6">
-        <li><a href="#explore" class="hover:text-green-400 transition">Explore</a></li>
-        <li><a href="#gallery" class="hover:text-green-400 transition">Gallery</a></li>
-        <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
+        <li><a href="{{ route('home') }}" class="hover:text-green-400 transition">HOME</a></li>
+        <li><a href="#gallery" class="hover:text-green-400 transition">ABOUT US</a></li>
+        <li><a href="#contact" class="hover:text-green-400 transition">GALLERY</a></li>
+        <li><a href="#contact" class="hover:text-green-400 transition">SERVICES</a></li>
+        <li><a href="{{ route('contact') }}" class="hover:text-green-400 transition">CONTACT</a></li>
     </ul>
     <button class="md:hidden text-white text-3xl">☰</button>
 </nav>
 
 <!-- Hero Section -->
-<section class="relative h-screen bg-cover bg-center" style="background-image: url('img/bg-hero.png');">
-    <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white text-center px-6">
-        <h1 class="text-6xl font-bold mb-4">Welcome to Garden Escape</h1>
-        <p class="text-xl">Discover the beauty of nature in a modern and serene garden experience.</p>
-        <a href="#explore" class="mt-6 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition">Explore Now</a>
+<section class="relative h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-6"
+         style="background-image: url('img/bg-hero.jpg');">
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
+
+    <div class="relative z-10 max-w-3xl">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-wide leading-tight font-serif drop-shadow-lg">
+            Step Into a World of Tranquility at <span class="text-green-400">Señorito's Garden</span>
+        </h1>
+        <p class="mt-4 text-lg md:text-xl font-light tracking-wide opacity-90">
+            Escape the hustle and bustle of everyday life. Let nature's beauty rejuvenate your senses. Explore hidden
+            paths, discover breathtaking landscapes, and experience unforgettable moments in a serene garden like no other.
+        </p>
+        <a href="#explore"
+           class="mt-6 inline-block bg-green-500 hover:bg-green-600 px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg hover:shadow-xl hover:scale-105">
+            Begin Your Journey
+        </a>
     </div>
 </section>
 
-<!-- About Section -->
-<section id="explore" class="py-20 px-6 text-center bg-white">
-    <h2 class="text-4xl font-bold text-gray-800">A Modern Garden Paradise</h2>
-    <p class="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">Experience the harmony of lush greenery, vibrant flowers, and tranquil landscapes designed to refresh your soul.</p>
+<section class="relative py-16 bg-white">
+    <!-- Dark Overlay -->
+    <div class="relative container mx-auto px-6 md:px-12 lg:px-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div>
+                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-6">
+                    Discover Serenity in Nature at Señorito's Garden
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Experience the beauty and tranquility of Senorito's
+                    Garden, a modern oasis nestled in nature.
+                    Perfect for events or a peaceful retreat, our
+                    garden blends lush greenery with elegant design.
+                </p>
+                <ul class="space-y-6 text-white">
+                    <li class="flex items-start">
+                        <img src="{{ asset('img/bullet.png') }}" class="w-7 h-7 mt-1 mr-4 flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900">Breathtaking Landscapes</h4>
+                            <p class="text-base text-gray-600">
+                                Stroll through beautifully landscaped gardens filled with vibrant flowers, lush greenery, and calming water features.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="{{ asset('img/bullet.png') }}" class="w-7 h-7 mt-1 mr-4 flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900">Perfect for Special Occasions</h4>
+                            <p class="text-base text-gray-600">
+                                Host weddings, birthdays, and corporate events in a picturesque setting designed to create unforgettable memories.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="{{ asset('img/bullet.png') }}" class="w-7 h-7 mt-1 mr-4 flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-900">A Place to Unwind</h4>
+                            <p class="text-base text-gray-600">
+                                Enjoy a peaceful retreat with nature, perfect for meditation, reading, or simply taking in the fresh air.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative text-center">
+                <div class="relative rounded-lg overflow-hidden w-full max-w-md mx-auto">
+                    <img src="{{ asset('img/landing-page-1.png') }}" alt="Image" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Gallery Section -->
-<section id="gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 pb-20 bg-gray-100">
-    <img src="https://source.unsplash.com/600x400/?garden,plants" class="rounded-lg shadow-lg w-full h-60 object-cover" alt="Garden 1">
-    <img src="https://source.unsplash.com/600x400/?nature,park" class="rounded-lg shadow-lg w-full h-60 object-cover" alt="Garden 2">
-    <img src="https://source.unsplash.com/600x400/?botanical,garden" class="rounded-lg shadow-lg w-full h-60 object-cover" alt="Garden 3">
-</section>
 
 <!-- Footer -->
-<footer id="contact" class="bg-gray-900 text-white text-center py-6">
-    <p>&copy; 2025 Garden Escape. All Rights Reserved.</p>
-</footer>
+@include('footer')
 </body>
 </html>
