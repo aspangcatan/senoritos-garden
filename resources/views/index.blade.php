@@ -4,30 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senorito's Garden</title>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            window.addEventListener("scroll", function () {
-                let navbar = document.getElementById("navbar");
-                if (window.scrollY > window.innerHeight - 100) {
-                    navbar.classList.add("bg-black", "shadow-lg");
-                    navbar.classList.remove("bg-transparent");
-                } else {
-                    navbar.classList.add("bg-transparent");
-                    navbar.classList.remove("bg-black", "shadow-lg");
-                }
-            });
-        });
-    </script>
-    <style>
-        .bg-custom {
-            background-color: #228B22 ;
-        }
-
-        .bg-custom:hover {
-            background-color: #1C6B1C ;
-        }
-    </style>
 </head>
 <body class="bg-gray-100">
 <!-- Navbar -->

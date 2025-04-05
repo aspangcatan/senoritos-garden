@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senorito's Garden</title>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Add jQuery -->
 </head>
@@ -82,7 +83,7 @@
                     Please fill out the form below with your details, and we'll respond as soon as possible. We look forward to assisting you!
                 </p>
 
-                <form id="contactForm" method="POST" class="space-y-4">
+                <form id="contactForm" class="space-y-4">
                     @csrf
                     <input type="text" name="full_name"
                            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:outline-none"
@@ -100,7 +101,7 @@
                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:outline-none"
                               placeholder="Your Message" rows="4"></textarea>
                     <button type="submit"
-                            class="w-full bg-black text-white py-3 rounded-lg text-lg font-medium hover:bg-gray-800 transition duration-300">
+                            class="w-full bg-custom text-white py-3 rounded-lg text-lg font-medium hover:bg-gray-800 transition duration-300">
                         Send Message
                     </button>
                 </form>
@@ -112,26 +113,6 @@
 
 <!-- Footer -->
 @include('footer')
-
-<script>
-    $(document).ready(function () {
-        const $navbar = $('#navbar');  // Corrected navbar selection
-        const $hero = $('#hero'); // Target the hero section
-
-        function toggleNavbarBackground() {
-            if ($(window).scrollTop() > $hero.outerHeight() - 60) {  // Scroll after hero section
-                $navbar.addClass('bg-black shadow-lg');
-                $navbar.removeClass('bg-transparent');
-            } else {
-                $navbar.removeClass('bg-black shadow-lg');
-                $navbar.addClass('bg-transparent');
-            }
-        }
-
-        $(window).on('scroll', toggleNavbarBackground);
-    });
-</script>
-
 </body>
 
 </html>

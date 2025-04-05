@@ -1,0 +1,42 @@
+.bg-custom {
+    background-color: #228B22 ;
+}
+
+.bg-custom:hover {
+    background-color: #1C6B1C ;
+}
+
+#navbar-menu {
+    background-color: black;  /* Set background color to black */
+    position: absolute;       /* Make the menu position absolute */
+    top: 0;                   /* Align it to the top */
+    left: 0;                  /* Align it to the left */
+    width: 100%;              /* Make it occupy the full screen */
+    height: 100vh;            /* Set height to 100% of the viewport */
+    display: flex;
+    flex-direction: column;   /* Stack the menu items vertically */
+    justify-content: center;  /* Center the items vertically */
+    align-items: center;      /* Center the items horizontally */
+    gap: 20px;                /* Add space between items */
+    transform: translateX(-100%); /* Initially hide the menu off-screen */
+    transition: transform 0.3s ease;  /* Add transition for sliding effect */
+}
+
+#navbar-menu.open {
+    transform: translateX(0);  /* Slide in when 'open' class is added */
+}
+
+#navbar-menu li {
+    margin: 10px 0;
+}
+
+#navbar-menu a {
+    color: white;  /* Make text white */
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+#navbar-menu a:hover {
+    color: #F8E231;  /* Add hover effect */
+}
