@@ -5,22 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senorito's Garden</title>
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 <body class="bg-gray-100">
 <!-- Navbar -->
 @include('layouts.header')
-<section class="relative h-screen bg-cover bg-center text-white flex items-center justify-center"
-         style="background-image: url('{{ asset('img/bg-hero.jpg') }}');">
-    <div class="absolute inset-0 bg-gradient-to-br from-green-900/60 to-black/30"></div>
-    <div class="relative z-10 text-center px-4 max-w-4xl">
-        <h1 class="text-4xl md:text-6xl font-extrabold font-serif leading-tight drop-shadow-lg">
-            Reconnect With Nature at <span class="text-green-400">Señorito's Garden</span>
-        </h1>
-        <p class="mt-4 text-lg md:text-xl font-light text-gray-100">
-            Where serenity meets celebration — explore lush landscapes, hidden blooms, and peaceful corners designed for
-            rest or grand events.
-        </p>
+<section class="relative h-screen text-white">
+    <!-- Swiper -->
+    <div class="swiper h-screen">
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide relative h-screen bg-cover bg-center"
+                 style="background-image: url('{{ asset('img/hero-4.png') }}');">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
+                <div class="relative z-10 flex items-center justify-center h-full px-4">
+                    <div class="text-center max-w-4xl">
+                        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-wide drop-shadow-xl"
+                            style="font-family: 'Cinzel', serif;">
+                            Reconnect With Nature at <span class="text-green-400">Señorito's Garden</span>
+                        </h1>
+                        <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto">
+                            Where serenity meets celebration — explore lush landscapes, hidden blooms, and peaceful
+                            corners designed for rest or grand events.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide relative h-screen bg-cover bg-center"
+                 style="background-image: url('{{ asset('img/hero-2.jpg') }}');">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
+                <div class="relative z-10 flex items-center justify-center h-full px-4">
+                    <div class="text-center max-w-4xl">
+                        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-wide drop-shadow-xl"
+                            style="font-family: 'Cinzel', serif;">
+                            A Journey Through Nature
+                        </h1>
+                        <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto">
+                            Follow the winding paths, breathe in the scent of fresh blooms, and lose yourself in tranquility.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide relative h-screen bg-cover bg-center"
+                 style="background-image: url('{{ asset('img/hero-3.jpg') }}');">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
+                <div class="relative z-10 flex items-center justify-center h-full px-4">
+                    <div class="text-center max-w-4xl">
+                        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-wide drop-shadow-xl"
+                            style="font-family: 'Cinzel', serif;">
+                            Celebrate Amidst Petals
+                        </h1>
+                        <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto">
+                            Your events deserve nature’s backdrop — where elegance and earth come together beautifully.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
 <section class="bg-gray-100 py-12 md:py-24">
@@ -92,68 +141,67 @@
                 </ul>
             </div>
 
-            <!-- Right: Image -->
-            <div class="md:w-1/2">
-                <div class="relative rounded-xl overflow-hidden shadow-xl h-[50vh] md:h-[75vh]">
-                    <img src="{{ asset('img/img-section-1-a.png') }}" alt="Garden Entrance"
-                         class="w-full h-full object-cover">
+            <!-- Right: Collaged Images (2x2 grid) -->
+            <div class="md:w-1/2 grid grid-cols-2 gap-6">
+                <div class="relative rounded-xl overflow-hidden shadow-xl h-[300px] md:h-[200px]">
+                    <img src="{{ asset('img/section-2-a.jpg') }}" alt="Garden Entrance" class="w-full h-full object-cover">
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl h-[300px] md:h-[200px]">
+                    <img src="{{ asset('img/section-2-b.jpg') }}" alt="Garden Path" class="w-full h-full object-cover">
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl h-[300px] md:h-[200px]">
+                    <img src="{{ asset('img/section-2-c.jpg') }}" alt="Event Setup" class="w-full h-full object-cover">
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl h-[300px] md:h-[200px]">
+                    <img src="{{ asset('img/section-2-d.jpg') }}" alt="Yoga Area" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="relative py-16 bg-gradient-to-br from-green-50 via-white to-green-100">
-    <div
-        class="absolute inset-0 bg-[url('{{ asset('img/leaf-pattern.png') }}')] bg-repeat opacity-5 pointer-events-none"></div>
 
-    <div class="relative container mx-auto px-6 md:px-12 lg:px-20">
-        <div class="flex flex-col md:flex-row gap-12 items-start">
-            <!-- Left: Image -->
-            <div class="md:w-1/2 order-last md:order-first">
-                <div class="relative rounded-xl overflow-hidden shadow-xl h-[150px] md:h-[300px] lg:h-[700px]">
-                    <img src="{{ asset('img/img-section-2-a.png') }}" alt="Garden Entrance"
-                         class="w-full h-full object-cover">
-                </div>
-            </div>
 
-            <!-- Right: Text -->
-            <div class="md:w-1/2">
-                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
-                    Discover Serenity in Nature at Señorito's Garden
-                </h2>
-
-                <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8">
-                    Experience the beauty and tranquility of Senorito's
-                    Garden, a modern oasis nestled in nature.
-                    Perfect for events or a peaceful retreat, our
-                    garden blends lush greenery with elegant design.
+<section class="bg-white py-24">
+    <div class="container mx-auto px-6 md:px-16">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                What Makes Señorito’s Garden Special
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Experience an enchanting blend of nature, elegance, and heartfelt moments through our curated offerings.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-12">
+            <!-- Feature 1 -->
+            <div class="text-center p-6 rounded-3xl shadow-lg hover:shadow-2xl bg-gradient-to-br from-green-100 to-green-50 transition">
+                <div class="text-5xl mb-4">🌿</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Botanical Wonders</h3>
+                <p class="text-gray-600">
+                    Explore over 200 curated plant species set within tranquil, photo-worthy landscapes.
                 </p>
-                <ul class="space-y-6">
-                    <li class="flex items-start">
-                        <img src="{{ asset('img/bullet.png') }}" class="w-7 h-7 mt-1 mr-4 flex-shrink-0">
-                        <div>
-                            <h4 class="text-xl font-semibold text-gray-900">Breathtaking Landscapes</h4>
-                            <p class="text-base text-gray-600">
-                                Stroll through beautifully landscaped gardens filled with vibrant flowers, lush
-                                greenery, and calming water features.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="flex items-start">
-                        <img src="{{ asset('img/bullet.png') }}" class="w-7 h-7 mt-1 mr-4 flex-shrink-0">
-                        <div>
-                            <h4 class="text-xl font-semibold text-gray-900">Perfect Venue for Celebrations</h4>
-                            <p class="text-base text-gray-600">
-                                Whether you're planning a wedding, corporate event, or a birthday, we offer the perfect
-                                venue for any occasion.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="text-center p-6 rounded-3xl shadow-lg hover:shadow-2xl bg-gradient-to-br from-pink-100 to-pink-50 transition">
+                <div class="text-5xl mb-4">💍</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Elegant Celebrations</h3>
+                <p class="text-gray-600">
+                    Host intimate weddings, grand birthdays, and memorable corporate events in a garden paradise.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="text-center p-6 rounded-3xl shadow-lg hover:shadow-2xl bg-gradient-to-br from-yellow-100 to-yellow-50 transition">
+                <div class="text-5xl mb-4">🧘‍♀️</div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Mindful Escapes</h3>
+                <p class="text-gray-600">
+                    Enjoy peaceful spaces for yoga, quiet contemplation, or simply soaking in nature’s rhythm.
+                </p>
             </div>
         </div>
     </div>
 </section>
+
 <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6 md:px-16">
         <div class="flex flex-col gap-12">
@@ -188,22 +236,20 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Additional Information Section -->
-            <div class="mt-12 text-center">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-                    Why Choose Señorito's Garden?
-                </h3>
-                <p class="text-lg text-gray-600 mb-4 mx-auto max-w-3xl">
-                    Our garden offers a unique blend of natural beauty, modern amenities, and an elegant setting, making it the perfect venue for any occasion. Whether it's a wedding, corporate event, or personal celebration, Señorito's Garden provides the ideal backdrop for your special day.
-                </p>
-                <p class="text-lg text-gray-600 mx-auto max-w-3xl">
-                    Get in touch today, and let's make your event as beautiful as nature itself.
-                </p>
-            </div>
         </div>
     </div>
 </section>
 @include('footer')
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
 </body>
 </html>
