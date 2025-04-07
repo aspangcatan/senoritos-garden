@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senorito's Garden</title>
+
+    <!-- Preload Fonts for Faster Loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Open+Sans:wght@300;400;600&display=swap" as="style">
+
+    <!-- Link CSS Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Include Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <style>
+        /* Font Display Swap for Faster Rendering */
+        @font-face {
+            font-family: 'Cinzel';
+            font-display: swap;
+            src: url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Open+Sans:wght@300;400;600&display=swap') format('woff2');
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
+
 <!-- Navbar -->
 @include('layouts.header')
+
 <section class="relative h-screen text-white">
     <!-- Swiper -->
     <div class="swiper h-screen">
@@ -19,7 +38,7 @@
 
             <!-- Slide 1 -->
             <div class="swiper-slide relative h-screen bg-cover bg-center"
-                 style="background-image: url('{{ asset('img/hero-4.png') }}');">
+                 style="background-image: url('{{ asset('img/hero-4.png') }}');" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
                 <div class="relative z-10 flex items-center justify-center h-full px-4">
                     <div class="text-center max-w-4xl">
@@ -37,7 +56,7 @@
 
             <!-- Slide 2 -->
             <div class="swiper-slide relative h-screen bg-cover bg-center"
-                 style="background-image: url('{{ asset('img/hero-2.jpg') }}');">
+                 style="background-image: url('{{ asset('img/hero-2.jpg') }}');" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
                 <div class="relative z-10 flex items-center justify-center h-full px-4">
                     <div class="text-center max-w-4xl">
@@ -54,7 +73,7 @@
 
             <!-- Slide 3 -->
             <div class="swiper-slide relative h-screen bg-cover bg-center"
-                 style="background-image: url('{{ asset('img/hero-3.jpg') }}');">
+                 style="background-image: url('{{ asset('img/hero-3.jpg') }}');" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
                 <div class="relative z-10 flex items-center justify-center h-full px-4">
                     <div class="text-center max-w-4xl">
@@ -159,8 +178,6 @@
         </div>
     </div>
 </section>
-
-
 <section class="bg-white py-24">
     <div class="container mx-auto px-6 md:px-16">
         <div class="text-center mb-16">
@@ -201,7 +218,6 @@
         </div>
     </div>
 </section>
-
 <section class="py-16 bg-gray-100">
     <div class="container mx-auto px-6 md:px-16">
         <div class="flex flex-col gap-12">
