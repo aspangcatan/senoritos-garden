@@ -73,7 +73,7 @@
 
             <!-- Slide 3 -->
             <div class="swiper-slide relative h-screen bg-cover bg-center"
-                 style="background-image: url('{{ asset('img/hero-3.jpg') }}');" loading="lazy">
+                 style="background-image: url('{{ asset('img/hero-1.jpg') }}');" loading="lazy">
                 <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
                 <div class="relative z-10 flex items-center justify-center h-full px-4">
                     <div class="text-center max-w-4xl">
