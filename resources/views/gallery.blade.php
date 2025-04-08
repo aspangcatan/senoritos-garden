@@ -145,7 +145,7 @@
     <!-- Category 4: Botanical Haven -->
     <div>
       <h2 class="text-3xl font-bold text-gray-800 mb-6">Señorito's Botanical Haven</h2>
-      <p class="text-lg text-gray-600 mb-12">The ultimate camping experience where you can reconnect with nature under the stars.</p>
+      <p class="text-lg text-gray-600 mb-12">A Sanctuary of Nature’s Beauty – Explore a vibrant tapestry of flora where every path blooms with wonder and fragrance.</p>
 
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -178,7 +178,7 @@
     <!-- Category 5: Aquatic Oasis -->
     <div>
       <h2 class="text-3xl font-bold text-gray-800 mb-6">Señorito's Aquatic Oasis</h2>
-      <p class="text-lg text-gray-600 mb-12">The ultimate camping experience where you can reconnect with nature under the stars.</p>
+      <p class="text-lg text-gray-600 mb-12">A Washroom with a View – Redefining relaxation, this scenic space offers luxury, cleanliness, and beauty with every visit.</p>
 
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -211,7 +211,7 @@
     <!-- Category 6: Dino Land -->
     <div>
       <h2 class="text-3xl font-bold text-gray-800 mb-6">Señorito's DinoLand</h2>
-      <p class="text-lg text-gray-600 mb-12">The ultimate camping experience where you can reconnect with nature under the stars.</p>
+      <p class="text-lg text-gray-600 mb-12">Step Back in Time – Meet life-size dinosaurs and fossil adventures in this prehistoric wonderland.</p>
 
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -244,7 +244,7 @@
     <!-- Category 7: Grand Event Hall -->
     <div>
       <h2 class="text-3xl font-bold text-gray-800 mb-6">Señorito's Grand Event Hall</h2>
-      <p class="text-lg text-gray-600 mb-12">The ultimate camping experience where you can reconnect with nature under the stars.</p>
+      <p class="text-lg text-gray-600 mb-12">Celebrating Life’s Special Moments – A timeless venue for weddings, reunions, and milestone celebrations.</p>
 
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
