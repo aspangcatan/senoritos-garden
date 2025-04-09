@@ -1,70 +1,45 @@
 @extends('layouts.app')
 @section('content')
     <section class="relative h-screen text-white">
+        <!-- Static Text for All Slides -->
+        <div class="absolute inset-0 flex items-center justify-center z-10 px-4">
+            <div class="text-center max-w-4xl">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-wide drop-shadow-xl"
+                    style="font-family: 'Cinzel', serif;">
+                    Step into  <span class="text-green-400">Señorito’s Garden</span>
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto">
+                    A sanctuary where time slows and nature speaks
+                </p>
+            </div>
+        </div>
+
         <!-- Swiper -->
         <div class="swiper h-screen">
             <div class="swiper-wrapper">
 
                 <!-- Slide 1 -->
                 <div class="swiper-slide relative h-screen bg-cover bg-center"
-                     style="background-image: url('{{ asset('img/hero-4.png') }}');; background-size: cover; background-position: center;"
+                     style="background-image: url('{{ asset('img/hero-4.png') }}'); background-size: cover; background-position: center;"
                      loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
-                    <div class="relative z-10 flex items-center justify-center h-full px-4">
-                        <div class="text-center max-w-4xl">
-                            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-wide drop-shadow-xl"
-                                style="font-family: 'Cinzel', serif;">
-                                Reconnect With Nature at <span class="text-green-400">Señorito's Garden</span>
-                            </h1>
-                            <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto">
-                                Where serenity meets celebration — explore lush landscapes, hidden blooms, and peaceful
-                                corners designed for rest or grand events.
-                            </p>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Slide 2 -->
                 <div class="swiper-slide relative h-screen bg-cover bg-center"
                      style="background-image: url('{{ asset('img/hero-2.jpg') }}'); background-size: cover; background-position: center;"
                      loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
-                    <div class="relative z-10 flex items-center justify-center h-full px-4">
-                        <div class="text-center max-w-4xl">
-                            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-wide drop-shadow-xl"
-                                style="font-family: 'Cinzel', serif;">
-                                A Journey Through Nature
-                            </h1>
-                            <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto">
-                                Follow the winding paths, breathe in the scent of fresh blooms, and lose yourself in
-                                tranquility.
-                            </p>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Slide 3 -->
                 <div class="swiper-slide relative h-screen bg-cover bg-center"
                      style="background-image: url('{{ asset('img/hero-1.jpg') }}'); background-size: cover; background-position: center;"
                      loading="lazy">
-                    <div class="absolute inset-0 bg-gradient-to-br from-green-900/70 to-black/40"></div>
-                    <div class="relative z-10 flex items-center justify-center h-full px-4">
-                        <div class="text-center max-w-4xl">
-                            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-wide drop-shadow-xl"
-                                style="font-family: 'Cinzel', serif;">
-                                Celebrate Amidst Petals
-                            </h1>
-                            <p class="mt-6 text-lg sm:text-xl md:text-2xl text-gray-200 font-light max-w-3xl mx-auto">
-                                Your events deserve nature’s backdrop — where elegance and earth come together
-                                beautifully.
-                            </p>
-                        </div>
-                    </div>
                 </div>
 
             </div>
         </div>
     </section>
+
     <section class="bg-gray-100 py-12 md:py-24">
         <div class="container mx-auto px-6 md:px-16">
             <div class="flex flex-col gap-12">
@@ -96,7 +71,6 @@
             </div>
         </div>
     </section>
-
     <section class="bg-white py-16 md:py-20 relative z-20">
         <div class="container mx-auto px-6 md:px-16">
             <div class="flex flex-col md:flex-row gap-12 items-start">
@@ -258,21 +232,22 @@
     </section>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize Swiper
             const swiper = new Swiper('.swiper', {
-                // Swiper configuration
-                loop: true,
-                speed: 1000,
-                autoplay: {
-                    delay: 5000,
+                loop: true, // Optional: If you want the fade to loop
+                effect: 'fade', // Set the effect to 'fade'
+                fadeEffect: {
+                    crossFade: true // Optional: This ensures a smooth transition
                 },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                autoplay: {
+                    delay: 5000, // Delay between slides (adjust to your preference)
                 },
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
             });
         });
