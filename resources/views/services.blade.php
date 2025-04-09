@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senorito's Garden</title>
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+@extends('layouts.app')
 
-<!-- Navbar -->
-@include('layouts.header')
+@section('content')
 
 <section id="hero" class="relative text-white bg-cover" style="background-image: url('{{ asset('img/services.jpg') }}')">
     <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-40"></div>
+        <!-- Reduced black overlay opacity from 40% to 10% -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-10"></div>
+        
         <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
             <svg class="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -26,6 +18,8 @@
                 <rect width="100%" height="100%" fill="url(#wave-pattern)" />
             </svg>
         </div>
+
+        <!-- Optional content can go here -->
         <!-- <div class="relative z-10 text-center px-6">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
                 About Senorito's Garden
@@ -33,6 +27,7 @@
         </div> -->
     </div>
 </section>
+
 
 <section class="bg-gray-100 py-16 px-4 md:px-10">
   <div class="max-w-7xl mx-auto text-center">
@@ -50,7 +45,4 @@
     </div>
   </div>
 </section>
-
-@include('footer')
-</body>
-</html>
+@endsection

@@ -1,38 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senorito's Garden</title>
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+@extends('layouts.app')
 
-<!-- Navbar -->
-@include('layouts.header')
-<section id="hero" class="relative text-white bg-cover" style="background-image: url('{{ asset('img/aboutus.jpg') }}')">
+@section('content')
+<section id="hero" class="relative text-white bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('img/aboutus.jpg') }}')">
     <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-40"></div>
-        <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
-            <svg class="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+        <!-- Optional: Lighter or removed overlay -->
+        <!-- <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-10"></div> -->
+
+        <!-- Optional: Softened SVG overlay -->
+        <!-- <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+            <svg class="w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <pattern id="wave-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
-                        <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.12)"
-                              stroke-width="2" />
+                        <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
                     </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#wave-pattern)" />
             </svg>
-        </div>
-        <!-- <div class="relative z-10 text-center px-6">
+        </div> -->
+
+        <!-- Optional: Re-enable heading if needed -->
+        <!--
+        <div class="relative z-10 text-center px-6">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
                 About Senorito's Garden
             </h1>
-        </div> -->
+        </div>
+        -->
     </div>
 </section>
-<section class="bg-gradient-to-r from-green-100 via-green-200 to-green-300 py-16 px-4 md:px-8">
+
+<section class="bg-gray-100 py-16 px-4 md:px-8">
   <div class="max-w-7xl mx-auto text-center space-y-12">
     <!-- Heading -->
     <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8">About Señorito's Garden</h2>
@@ -49,22 +46,19 @@
 
       <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">Whether you’re envisioning a fairytale wedding, an unforgettable celebration, or a photographic journey through paradise, let Señorito’s Garden be the backdrop to your extraordinary tale. Where moments bloom into forever.</p>
     </div>
-
-    <div class="relative h-96 md:h-[32rem] w-full">
-    <!-- Background Image -->
-    <img src="{{ asset('img/vissionary.jpg') }}" alt="Roots of a Visionary" class="absolute inset-0 w-full h-full object-cover" />
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-
-        <!-- Text Content -->
-        <div class="relative z-10 flex items-center justify-center h-full">
-            <h2 class="text-3xl md:text-4xl font-semibold text-white text-center px-4">
-            Señorito's Garden: <span class="block mt-2">Roots of a Visionary</span>
-            </h2>
-        </div>
+    <h2 class="text-3xl md:text-4xl font-semibold text-black text-center px-4 drop-shadow-md">
+        Señorito's Garden:
+        <span class="block mt-2 italic text-4xl" style="font-family: 'Dancing Script', cursive;">
+            Roots of a Visionary
+        </span>
+    </h2>
+    <!-- Image with vibrant colors and preserved layout -->
+    <div class="relative w-full h-[32rem] overflow-hidden rounded-lg shadow-lg">
+        <img src="{{ asset('img/vissionary.jpg') }}" alt="Roots of a Visionary" class="w-full h-full object-cover" />
     </div>
 
     <!-- Descriptive Paragraphs -->
+     
     <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-8">The Landscape of a Dream: Michel Lhuillier's Unfolding Legacy</h2>
     <div class="space-y-8">
       <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">This is the story of a man who learned that true dreams do not expire—they simply wait for their moment to bloom.</p>
@@ -121,8 +115,4 @@
     </div>
   </div>
 </section>
-
-
-@include('footer')
-</body>
-</html>
+@endsection
