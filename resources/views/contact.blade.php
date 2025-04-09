@@ -17,7 +17,7 @@
             </div>
             <div class="relative z-10 text-center px-6">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
-                    Welcome to Senorito's Garden
+                    WELCOME TO <br /><span class="text-green-400">Señorito’s Garden</span>
                 </h1>
                 <p class="mt-4 text-lg md:text-2xl font-light tracking-wide">
                     Have questions? We're here to help.

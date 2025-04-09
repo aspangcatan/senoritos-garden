@@ -36,7 +36,7 @@
 
 <section class="bg-white py-16 px-4 md:px-10">
   <div class="max-w-7xl mx-auto space-y-24">
-    
+
     <!-- Category 1: Playland Adventures -->
     <div>
       <h2 class="text-3xl font-bold text-gray-800 mb-6">Señorito's Playland Adventures</h2>
@@ -44,7 +44,7 @@
 
       <!-- Gallery Grid for Playland Adventures -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
+
         <!-- Image 1 -->
         <div class="relative group">
           <img src="{{ asset('img/playlandadventures/playland1.jpg') }}" alt="Playland Adventure 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
@@ -79,7 +79,7 @@
 
       <!-- Gallery Grid for Serenity Lake -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
+
         <!-- Image 1 -->
         <div class="relative group">
           <img src="{{ asset('img/serenitylake/lake1.jpg') }}" alt="Serenity Lake 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />

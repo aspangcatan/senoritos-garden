@@ -39,7 +39,6 @@
             </div>
         </div>
     </section>
-
     <section class="bg-gray-100 py-12 md:py-24">
         <div class="container mx-auto px-6 md:px-16">
             <div class="flex flex-col gap-12">
@@ -226,7 +225,6 @@
             </div>
         </div>
     </section>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const swiper = new Swiper('.swiper', {
@@ -236,7 +234,7 @@
                     crossFade: true // Optional: This ensures a smooth transition
                 },
                 autoplay: {
-                    delay: 5000, // Delay between slides (adjust to your preference)
+                    delay: 4000, // Delay between slides (adjust to your preference)
                 },
                 pagination: {
                     el: '.swiper-pagination',

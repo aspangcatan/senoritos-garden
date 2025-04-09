@@ -36,7 +36,7 @@
   <div class="max-w-7xl mx-auto text-center space-y-12">
     <!-- Heading -->
     <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-8">About Señorito's Garden</h2>
-    
+
     <!-- Descriptive Paragraphs -->
     <div class="space-y-8">
       <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">Nestled in the heart of Cebu, Señorito's Garden is where nature’s poetry meets timeless elegance. A sanctuary crafted for moments that transcend the ordinary, our garden is more than a venue—it is a canvas where dreams unfurl, love blossoms, and memories are etched into the very air you breathe.</p>

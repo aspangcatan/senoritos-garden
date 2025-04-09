@@ -36,7 +36,7 @@
                 $("#content").fadeOut(200, function () {
                     $(this).html(newContent).fadeIn(200);
                     history.pushState(null, "", url);
-
+                    updateActiveNav();
                     // Re-run scripts or rebind things if needed
                 });
             },
@@ -76,6 +76,25 @@
             document.body.classList.remove('no-scroll');
         }
     }
+
+    function updateActiveNav() {
+        // Remove active class from all links
+        $('#navbar a').removeClass('text-green-400 font-extrabold');
+
+        // Get the current path and remove any trailing slashes
+        const currentPath = window.location.href.replace(/\/$/, ''); // Removes trailing slash if present
+
+        $('#navbar a').each(function () {
+            const linkHref = $(this).attr('href').replace(/\/$/, ''); // Also remove trailing slash from linkHref
+            console.log(currentPath + " <=>" + linkHref);
+
+            // Compare normalized URLs
+            if (linkHref === currentPath) {
+                $(this).addClass('text-green-400 font-extrabold');
+            }
+        });
+    }
+
 </script>
 </body>
 </html>
