@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senorito's Garden</title>
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Add jQuery -->
-</head>
-
-<body class="bg-gray-100">
-
-@include('layouts.header')
+@section('content')
 
 <!-- Hero Section -->
 <section id="hero" class="relative text-white bg-cover" style="background-image: url('{{ asset('img/senorita-garden-main.png') }}')">
@@ -110,9 +98,4 @@
         </div>
     </div>
 </section>
-
-<!-- Footer -->
-@include('footer')
-</body>
-
-</html>
+@endsection

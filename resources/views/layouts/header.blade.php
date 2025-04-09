@@ -3,7 +3,7 @@
 
     <!-- Desktop Navigation -->
     <ul class="hidden md:flex space-x-6">
-        <li><a href="{{ route('home') }}" class="hover:text-green-400 transition">HOME</a></li>
+        <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'text-green-400' : '' }} hover:text-green-400 transition">HOME</a></li>
         <li><a href="{{ route('about') }}" class="hover:text-green-400 transition">ABOUT US</a></li>
         <li><a href="{{ route('gallery') }}" class="hover:text-green-400 transition">GALLERY</a></li>
         <li><a href="{{ route('services') }}" class="hover:text-green-400 transition">SERVICES</a></li>
@@ -19,7 +19,7 @@
 </nav>
 
 <!-- Fullscreen Mobile Menu (Hidden by default) -->
-<nav id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-6 z-40">
+<nav id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-6 z-40 transition-all duration-300 ease-in-out opacity-0 transform scale-95">
     <a href="{{ route('home') }}" class="text-xl hover:text-green-400 font-medium">HOME</a>
     <a href="{{ route('about') }}" class="text-xl hover:text-green-400 font-medium">ABOUT US</a>
     <a href="{{ route('gallery') }}" class="text-xl hover:text-green-400 font-medium">GALLERY</a>
