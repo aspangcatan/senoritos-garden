@@ -1,40 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senorito's Garden</title>
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+@extends('layouts.app')
 
-<!-- Navbar -->
-@include('layouts.header')
-
-<section id="hero" class="relative text-white bg-cover" style="background-image: url('{{ asset('img/lakegallery.jpg') }}')">
+@section('content')
+<section id="hero" class="relative text-white bg-cover bg-center" style="background-image: url('{{ asset('img/lakegallery.jpg') }}')">
     <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-40"></div>
+        
+        <!-- REMOVE this -->
+        <!-- <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-40"></div> -->
+
         <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
             <svg class="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <pattern id="wave-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
-                        <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.12)"
-                              stroke-width="2" />
+                        <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
                     </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#wave-pattern)" />
             </svg>
         </div>
-        <!-- <div class="relative z-10 text-center px-6">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
-                About Senorito's Garden
-            </h1>
-        </div> -->
     </div>
 </section>
 
-<section class="bg-white py-16 px-4 md:px-10">
+
+<section class="bg-gray-100 py-16 px-4 md:px-10">
   <div class="max-w-7xl mx-auto space-y-24">
 
     <!-- Category 1: Playland Adventures -->
@@ -45,27 +32,43 @@
       <!-- Gallery Grid for Playland Adventures -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
+      <!-- Image 1 -->
+      <div class="relative group h-64">
+          <img src="{{ asset('img/playlandadventures/playland4.jpg') }}" alt="Playland Adventure 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Playland Adventure</p>
+          </div>
+        </div>
+
         <!-- Image 1 -->
-        <div class="relative group">
+        <div class="relative group h-64">
+          <img src="{{ asset('img/playlandadventures/playland5.jpg') }}" alt="Playland Adventure 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Playland Adventure</p>
+          </div>
+        </div>
+        
+        <!-- Image 1 -->
+        <div class="relative group h-64">
           <img src="{{ asset('img/playlandadventures/playland1.jpg') }}" alt="Playland Adventure 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Playland Adventure 1</p>
+            <p class="text-white text-lg font-semibold">Playland Adventure</p>
           </div>
         </div>
 
         <!-- Image 2 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/playlandadventures/playland2.jpg') }}" alt="Playland Adventure 2" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Playland Adventure 2</p>
+            <p class="text-white text-lg font-semibold">Playland Adventure</p>
           </div>
         </div>
 
         <!-- Image 3 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/playlandadventures/playland3.jpg') }}" alt="Playland Adventure 3" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Playland Adventure 3</p>
+            <p class="text-white text-lg font-semibold">Playland Adventure</p>
           </div>
         </div>
 
@@ -80,27 +83,51 @@
       <!-- Gallery Grid for Serenity Lake -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
+      <!-- Image 1 -->
+      <div class="relative group h-64">
+          <img src="{{ asset('img/serenitylake/lake4.jpg') }}" alt="Serenity Lake 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Serenity Lake</p>
+          </div>
+        </div>
+
         <!-- Image 1 -->
-        <div class="relative group">
+        <div class="relative group h-64">
+          <img src="{{ asset('img/serenitylake/lake5.jpg') }}" alt="Serenity Lake 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Serenity Lake</p>
+          </div>
+        </div>
+
+        <!-- Image 1 -->
+        <div class="relative group h-64">
+          <img src="{{ asset('img/serenitylake/lake6.jpg') }}" alt="Serenity Lake 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Serenity Lake</p>
+          </div>
+        </div>
+        
+        <!-- Image 1 -->
+        <div class="relative group h-64">
           <img src="{{ asset('img/serenitylake/lake1.jpg') }}" alt="Serenity Lake 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Serenity Lake 1</p>
+            <p class="text-white text-lg font-semibold">Serenity Lake</p>
           </div>
         </div>
 
         <!-- Image 2 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/serenitylake/lake2.jpg') }}" alt="Serenity Lake 2" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Serenity Lake 2</p>
+            <p class="text-white text-lg font-semibold">Serenity Lake</p>
           </div>
         </div>
 
         <!-- Image 3 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/serenitylake/lake3.jpg') }}" alt="Serenity Lake 3" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Serenity Lake 3</p>
+            <p class="text-white text-lg font-semibold">Serenity Lake</p>
           </div>
         </div>
 
@@ -116,27 +143,51 @@
 
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Image 1 -->
+      <div class="relative group h-64">
+          <img src="{{ asset('img/naturesretreat/retreat4.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Nature's Retreat</p>
+          </div>
+        </div>
+
         <!-- Image 1 -->
-        <div class="relative group">
+        <div class="relative group h-64">
+          <img src="{{ asset('img/naturesretreat/retreat5.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Nature's Retreat</p>
+          </div>
+        </div>
+
+        <!-- Image 1 -->
+        <div class="relative group h-64">
+          <img src="{{ asset('img/naturesretreat/retreat6.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Nature's Retreat</p>
+          </div>
+        </div>
+        <!-- Image 1 -->
+        <div class="relative group h-64">
           <img src="{{ asset('img/naturesretreat/retreat1.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 1</p>
+            <p class="text-white text-lg font-semibold">Nature's Retreat</p>
           </div>
         </div>
 
         <!-- Image 2 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/naturesretreat/retreat2.jpg') }}" alt="Nature's Retreat 2" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 2</p>
+            <p class="text-white text-lg font-semibold">Nature's Retreat</p>
           </div>
         </div>
 
         <!-- Image 3 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/naturesretreat/retreat3.jpg') }}" alt="Nature's Retreat 3" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 3</p>
+            <p class="text-white text-lg font-semibold">Nature's Retreat</p>
           </div>
         </div>
       </div>
@@ -149,27 +200,49 @@
 
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
         <!-- Image 1 -->
-        <div class="relative group">
+        <div class="relative group h-64">
+          <img src="{{ asset('img/botanicalhaven/botanical4.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Botanical Haven</p>
+          </div>
+        </div>
+          <!-- Image 1 -->
+          <div class="relative group h-64">
+          <img src="{{ asset('img/botanicalhaven/botanical7.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Botanical Haven</p>
+          </div>
+        </div>
+          <!-- Image 1 -->
+          <div class="relative group h-64">
+          <img src="{{ asset('img/botanicalhaven/botanical6.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Botanical Haven</p>
+          </div>
+        </div>
+        <!-- Image 1 -->
+        <div class="relative group h-64">
           <img src="{{ asset('img/botanicalhaven/botanical1.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 1</p>
+            <p class="text-white text-lg font-semibold">Botanical Haven</p>
           </div>
         </div>
 
         <!-- Image 2 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/botanicalhaven/botanical2.jpg') }}" alt="Nature's Retreat 2" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 2</p>
+            <p class="text-white text-lg font-semibold">Botanical Haven</p>
           </div>
         </div>
 
         <!-- Image 3 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/botanicalhaven/botanical3.jpg') }}" alt="Nature's Retreat 3" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 3</p>
+            <p class="text-white text-lg font-semibold">Botanical Haven</p>
           </div>
         </div>
       </div>
@@ -183,26 +256,47 @@
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Image 1 -->
-        <div class="relative group">
+        <div class="relative group h-64">
+          <img src="{{ asset('img/aquaticoasis/aquaticoasis4.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Aquatic Oasis</p>
+          </div>
+        </div>
+        <!-- Image 1 -->
+        <div class="relative group h-64">
+          <img src="{{ asset('img/aquaticoasis/aquaticoasis5.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Aquatic Oasis</p>
+          </div>
+        </div>
+        <!-- Image 1 -->
+        <div class="relative group h-64">
+          <img src="{{ asset('img/aquaticoasis/aquaticoasis6.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Aquatic Oasis</p>
+          </div>
+        </div>
+        <!-- Image 1 -->
+        <div class="relative group h-64">
           <img src="{{ asset('img/aquaticoasis/aquaticoasis1.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 1</p>
+            <p class="text-white text-lg font-semibold">Aquatic Oasis</p>
           </div>
         </div>
 
         <!-- Image 2 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/aquaticoasis/aquaticoasis2.jpg') }}" alt="Nature's Retreat 2" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 2</p>
+            <p class="text-white text-lg font-semibold">Aquatic Oasis</p>
           </div>
         </div>
 
         <!-- Image 3 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/aquaticoasis/aquaticoasis3.jpg') }}" alt="Nature's Retreat 3" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 3</p>
+            <p class="text-white text-lg font-semibold">Aquatic Oasis</p>
           </div>
         </div>
       </div>
@@ -215,19 +309,40 @@
 
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Image 1 -->
+          <div class="relative group h-64">
+          <img src="{{ asset('img/dinoland/dinoland4.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Dino Land</p>
+          </div>
+        </div>
+          <!-- Image 1 -->
+          <div class="relative group h-64">
+          <img src="{{ asset('img/dinoland/dinoland5.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Dino Land</p>
+          </div>
+        </div>
+          <!-- Image 1 -->
+          <div class="relative group h-64">
+          <img src="{{ asset('img/dinoland/dinoland6.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Dino Land</p>
+          </div>
+        </div>
         <!-- Image 1 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/dinoland/dinoland1.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 1</p>
+            <p class="text-white text-lg font-semibold">Dino Land</p>
           </div>
         </div>
 
         <!-- Image 2 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/dinoland/dinoland2.jpg') }}" alt="Nature's Retreat 2" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 2</p>
+            <p class="text-white text-lg font-semibold">Dino Land</p>
           </div>
         </div>
 
@@ -235,7 +350,7 @@
         <div class="relative group">
           <img src="{{ asset('img/dinoland/dinoland3.jpg') }}" alt="Nature's Retreat 3" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 3</p>
+            <p class="text-white text-lg font-semibold">Dino Land</p>
           </div>
         </div>
       </div>
@@ -248,27 +363,48 @@
 
       <!-- Gallery Grid for Nature's Retreat -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+         <!-- Image 1 -->
+         <div class="relative group h-64">
+          <img src="{{ asset('img/grandeventhall/grandeventhall4.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Grand Event Hall</p>
+          </div>
+        </div>
+         <!-- Image 1 -->
+         <div class="relative group h-64">
+          <img src="{{ asset('img/grandeventhall/grandeventhall5.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Grand Event Hall</p>
+          </div>
+        </div>
+         <!-- Image 1 -->
+         <div class="relative group h-64">
+          <img src="{{ asset('img/grandeventhall/grandeventhall6.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
+          <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
+            <p class="text-white text-lg font-semibold">Grand Event Hall</p>
+          </div>
+        </div>
         <!-- Image 1 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/grandeventhall/grandeventhall1.jpg') }}" alt="Nature's Retreat 1" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 1</p>
+            <p class="text-white text-lg font-semibold">Grand Event Hall</p>
           </div>
         </div>
 
         <!-- Image 2 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/grandeventhall/grandeventhall2.jpg') }}" alt="Nature's Retreat 2" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 2</p>
+            <p class="text-white text-lg font-semibold">Grand Event Hall</p>
           </div>
         </div>
 
         <!-- Image 3 -->
-        <div class="relative group">
+        <div class="relative group h-64">
           <img src="{{ asset('img/grandeventhall/grandeventhall3.jpg') }}" alt="Nature's Retreat 3" class="w-full h-full object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition duration-300" />
           <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition duration-300">
-            <p class="text-white text-lg font-semibold">Nature's Retreat 3</p>
+            <p class="text-white text-lg font-semibold">Grand Event Hall</p>
           </div>
         </div>
       </div>
@@ -296,7 +432,4 @@
     </div>
   </div>
 </section>
-
-@include('footer')
-</body>
-</html>
+@endsection
