@@ -1,5 +1,7 @@
 <nav id="navbar" class="fixed top-0 left-0 w-full transition-all duration-500 bg-transparent text-white py-4 px-6 flex justify-between items-center z-50">
-    <h1 class="text-2xl font-bold">Senorito's Garden</h1>
+    <a href="{{ route('home') }}">
+        <h1 class="text-2xl font-bold">Senorito's Garden</h1>
+    </a>
 
     <!-- Desktop Navigation -->
     <ul class="hidden md:flex space-x-6">
