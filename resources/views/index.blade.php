@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <section class="relative h-screen text-white">
-        <!-- Static Text for All Slides -->
+        <!-- Static Text Overlay -->
         <div class="absolute inset-0 flex items-center justify-center z-10 px-4">
             <div class="text-center max-w-4xl">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
@@ -10,35 +10,16 @@
                 <p class="mt-4 text-lg md:text-2xl font-light tracking-wide">
                     A sanctuary where time slows and nature speaks
                 </p>
-                </p>
             </div>
         </div>
 
-        <!-- Swiper -->
-        <div class="swiper h-screen">
-            <div class="swiper-wrapper">
-
-                <!-- Slide 1 -->
-                <div class="swiper-slide relative h-screen bg-cover bg-center"
-                     style="background-image: url('{{ asset('img/hero-4.png') }}'); background-size: cover; background-position: center;"
-                     loading="lazy">
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="swiper-slide relative h-screen bg-cover bg-center"
-                     style="background-image: url('{{ asset('img/hero-2.jpg') }}'); background-size: cover; background-position: center;"
-                     loading="lazy">
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="swiper-slide relative h-screen bg-cover bg-center"
-                     style="background-image: url('{{ asset('img/hero-1.jpg') }}'); background-size: cover; background-position: center;"
-                     loading="lazy">
-                </div>
-
-            </div>
-        </div>
+        <!-- Fullscreen Video Background -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="{{ asset('video/hero-video.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </section>
+
     <section class="bg-gray-100 py-12 md:py-24">
         <div class="container mx-auto px-6 md:px-16">
             <div class="flex flex-col gap-12">
