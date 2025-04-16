@@ -1,25 +1,64 @@
 @extends('layouts.app')
 @section('content')
     <section class="relative h-screen text-white">
-        <!-- Static Text Overlay -->
-        <div class="absolute inset-0 flex items-center justify-center z-10 px-4">
-            <div class="text-center max-w-4xl">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
-                    Step into <br /><span class="text-green-400">Señorito’s Garden</span>
-                </h1>
-                <p class="mt-4 text-lg md:text-2xl font-light tracking-wide">
-                    A sanctuary where time slows and nature speaks
-                </p>
+        <!-- Static Text Overlay with Full Width Background -->
+        <div class="absolute inset-0 w-full h-full flex items-center justify-center z-10 px-0">
+            <div class="w-full bg-gray-800 bg-opacity-50 py-6">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
+                        Step into <br /><span class="text-green-400">Señorito’s Garden</span>
+                    </h1>
+                    <p class="mt-4 text-lg md:text-2xl font-light tracking-wide">
+                        A sanctuary where time slows and nature speaks
+                    </p>
+                </div>
             </div>
         </div>
 
-        <!-- Fullscreen Video Background -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="{{ asset('video/hero-video.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <!-- Swiper Carousel -->
+        <div class="swiper-container absolute inset-0 w-full h-full z-0">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-9.jpg') }}" alt="Hero 3" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-7.jpg') }}" alt="Hero 3" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-1.jpg') }}" alt="Hero 1" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-2.jpg') }}" alt="Hero 2" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-3.jpg') }}" alt="Hero 3" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-4.png') }}" alt="Hero 4" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-5.jpg') }}" alt="Hero 1" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-6.jpg') }}" alt="Hero 2" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-8.jpg') }}" alt="Hero 3" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-10.jpg') }}" alt="Hero 3" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-11.jpg') }}" alt="Hero 3" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide bg-transparent">
+                    <img src="{{ asset('img/hero-12.jpg') }}" alt="Hero 3" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
-
     <section class="bg-gray-100 py-12 md:py-24">
         <div class="container mx-auto px-6 md:px-16">
             <div class="flex flex-col gap-12">
@@ -206,26 +245,18 @@
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const swiper = new Swiper('.swiper', {
-                loop: true, // Optional: If you want the fade to loop
-                effect: 'fade', // Set the effect to 'fade'
-                fadeEffect: {
-                    crossFade: true // Optional: This ensures a smooth transition
-                },
-                autoplay: {
-                    delay: 4000, // Delay between slides (adjust to your preference)
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 2500, // Adjust the time interval between slides
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            effect: 'fade', // Optional: You can change the transition effect (e.g., 'fade', 'slide')
         });
     </script>
 @endsection

@@ -1,6 +1,6 @@
 <nav id="navbar" class="fixed top-0 left-0 w-full transition-all duration-500 bg-transparent text-white py-4 px-6 flex justify-between items-center z-50">
-    <a href="{{ route('home') }}">
-        <h1 class="text-2xl font-bold">Senorito's Garden</h1>
+    <a href="{{ route('home') }}" class="block w-40 md:w-48">
+        <img src="{{ asset('img/home-logo.png') }}" alt="Senorito's Garden Logo" class="w-full h-auto object-contain">
     </a>
 
     <!-- Desktop Navigation -->
@@ -22,23 +22,23 @@
 
 <!-- Fullscreen Mobile Menu (Hidden by default) -->
 <nav id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 text-white hidden flex flex-col items-center justify-center space-y-6 z-40 transition-all duration-300 ease-in-out opacity-0 transform scale-95">
-    <a href="{{ route('home') }}" 
+    <a href="{{ route('home') }}"
        class="{{ request()->routeIs('home') ? 'text-green-400 font-extrabold' : '' }} text-xl hover:text-green-400 font-medium">
        HOME
     </a>
-    <a href="{{ route('about') }}" 
+    <a href="{{ route('about') }}"
        class="{{ request()->routeIs('about') ? 'text-green-400 font-extrabold' : '' }} text-xl hover:text-green-400 font-medium">
        ABOUT US
     </a>
-    <a href="{{ route('gallery') }}" 
+    <a href="{{ route('gallery') }}"
        class="{{ request()->routeIs('gallery') ? 'text-green-400 font-extrabold' : '' }} text-xl hover:text-green-400 font-medium">
        GALLERY
     </a>
-    <a href="{{ route('services') }}" 
+    <a href="{{ route('services') }}"
        class="{{ request()->routeIs('services') ? 'text-green-400 font-extrabold' : '' }} text-xl hover:text-green-400 font-medium">
        SERVICES
     </a>
-    <a href="{{ route('contact') }}" 
+    <a href="{{ route('contact') }}"
        class="{{ request()->routeIs('contact') ? 'text-green-400 font-extrabold' : '' }} text-xl hover:text-green-400 font-medium">
        CONTACT
     </a>
@@ -65,7 +65,7 @@
     // Toggle mobile menu visibility on button click
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
-        
+
         // Add transition classes for smooth animation
         if (mobileMenu.classList.contains('hidden')) {
             mobileMenu.classList.remove('opacity-100', 'scale-100');
@@ -100,7 +100,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         const currentRoute = window.location.pathname;
         const menuLinks = document.querySelectorAll('#mobile-menu a');
-        
+
         menuLinks.forEach(link => {
             // Reset active class for all links
             link.classList.remove('text-green-400', 'font-extrabold');
