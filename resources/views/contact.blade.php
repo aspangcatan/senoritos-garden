@@ -1,33 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
-
     <!-- Hero Section -->
-    <section id="hero" class="relative text-white bg-cover" style="background-image: url('{{ asset('img/contact/img-contact.jpg') }}')">
-        <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
-                <svg class="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <pattern id="wave-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
-                            <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#wave-pattern)" />
-                </svg>
-            </div>
-            <div class="relative z-10 text-center px-6">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
-                    WELCOME TO <br /><span class="text-green-400">Señorito’s Garden</span>
-                </h1>
-                <p class="mt-4 text-lg md:text-2xl font-light tracking-wide">
-                    Have questions? We're here to help.
-                </p>
-                <p class="mt-2 text-sm md:text-lg tracking-wide text-gray-200">
-                    Reach out and we'll get back to you as soon as possible.
-                </p>
+    <section class="relative h-[70vh] text-white bg-cover bg-center" style="background-image: url('{{ asset('img/contact/img-contact.jpg') }}')">
+        <!-- Top Gradient Overlay for Navbar Contrast -->
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/70 to-transparent z-20"></div>
+
+        <!-- Static Text Overlay with Full Width Background -->
+        <div class="absolute inset-0 w-full h-full flex items-center justify-center z-30">
+            <div class="w-full bg-gray-900 bg-opacity-40 py-6">
+                <div class="text-center max-w-4xl mx-auto px-6">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
+                        WELCOME TO <br /><span class="text-green-400">Señorito’s Garden</span>
+                    </h1>
+                    <p class="mt-4 text-lg md:text-2xl font-light tracking-wide">
+                        Have questions? We're here to help.
+                    </p>
+                    <p class="mt-2 text-sm md:text-lg tracking-wide text-gray-200">
+                        Reach out and we'll get back to you as soon as possible.
+                    </p>
+                </div>
             </div>
         </div>
+
+        <!-- Optional SVG Pattern for Decoration -->
+        <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-10">
+            <svg class="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="wave-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#wave-pattern)" />
+            </svg>
+        </div>
     </section>
+
 
     <!-- Contact Section -->
     <section class="py-16 px-4 sm:px-6 lg:px-20 bg-white">

@@ -52,6 +52,8 @@
 
     $(document).ready(function () {
         // Intercept all internal navigation clicks
+        $("#desktop-nav li:eq(0) a").addClass('bg-[#FEC119] text-black font-extrabold');
+        $("#desktop-nav li:eq(0) a").removeClass('bg-black/60 text-white');
         $(document).on("click", "#navbar a, #mobile-menu a", function (e) {
             e.preventDefault();
             const href = $(this).attr("href");
@@ -79,23 +81,26 @@
     }
 
     function updateActiveNav() {
-        // Remove active class from all links
-        $('#navbar a').removeClass('text-green-400 font-extrabold');
+        // Normalize the current path
+        const currentPath = window.location.href.replace(/\/$/, '');
 
-        // Get the current path and remove any trailing slashes
-        const currentPath = window.location.href.replace(/\/$/, ''); // Removes trailing slash if present
+        // Select nav links EXCLUDING the logo
+        $('#navbar a:not(:has(img)), #mobile-menu a').each(function () {
+            const linkHref = $(this).attr('href').replace(/\/$/, '');
 
-        $('#navbar a').each(function () {
-            const linkHref = $(this).attr('href').replace(/\/$/, ''); // Also remove trailing slash from linkHref
-            console.log(currentPath + " <=>" + linkHref);
+            // Reset styles
+            $(this)
+                .removeClass('bg-[#FEC119] text-black font-extrabold')
+                .addClass('bg-black/60 text-white');
 
-            // Compare normalized URLs
+            // Match and apply active styles
             if (linkHref === currentPath) {
-                $(this).addClass('text-green-400 font-extrabold');
+                $(this)
+                    .addClass('bg-[#FEC119] text-black font-extrabold')
+                    .removeClass('bg-black/60 text-white');
             }
         });
     }
-
 </script>
 </body>
 </html>

@@ -249,6 +249,7 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             loop: true,
+            loopAdditionalSlides: 1,
             autoplay: {
                 delay: 2500, // Adjust the time interval between slides
             },
