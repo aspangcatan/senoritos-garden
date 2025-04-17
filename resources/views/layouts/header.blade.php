@@ -8,7 +8,7 @@
 
         <!-- Home Logo -->
         <a href="{{ route('home') }}" class="block w-40 md:w-48 z-10">
-            <img src="{{ asset('img/home-logo.png') }}" alt="Senorito's Garden Logo" class="w-full h-auto object-contain">
+            <img src="{{ asset('img/sg-logo.png') }}" alt="Senorito's Garden Logo" class="w-full h-auto object-contain">
         </a>
     </div>
 
