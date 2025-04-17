@@ -52,8 +52,12 @@
 
     $(document).ready(function () {
         // Intercept all internal navigation clicks
-        $("#desktop-nav li:eq(0) a").addClass('bg-[#FEC119] text-black font-extrabold');
-        $("#desktop-nav li:eq(0) a").removeClass('bg-black/60 text-white');
+
+        @if(Route::currentRouteName() == "home")
+            $("#desktop-nav li:eq(0) a").addClass('bg-[#FEC119] text-black font-extrabold');
+            $("#desktop-nav li:eq(0) a").removeClass('bg-black/60 text-white');
+        @endif
+
         $(document).on("click", "#navbar a, #mobile-menu a", function (e) {
             e.preventDefault();
             const href = $(this).attr("href");
