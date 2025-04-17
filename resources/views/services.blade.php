@@ -36,12 +36,12 @@
     
     <!-- Optional: Add an image or icon to emphasize the message -->
     <div class="flex justify-center mb-6">
-      <img src="https://via.placeholder.com/200" alt="Under Construction" class="w-32 h-32 object-contain">
+      <img src="{{ asset('img/underconstruction.jpg') }}" alt="Under Construction" class="w-70 h-32 object-contain">
     </div>
     
     <!-- Optional: A button to redirect to a contact page or social media -->
     <div>
-      <a href="#contact" class="inline-block bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Contact Us</a>
+      <a href="{{ route('contact') }}" class="inline-block bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Contact Us</a>
     </div>
   </div>
 </section>

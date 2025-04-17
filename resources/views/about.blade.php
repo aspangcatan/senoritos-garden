@@ -53,8 +53,8 @@
         </span>
     </h2>
     <!-- Image with vibrant colors and preserved layout -->
-    <div class="relative w-full h-[32rem] overflow-hidden rounded-lg shadow-lg">
-        <img src="{{ asset('img/vissionary.jpg') }}" alt="Roots of a Visionary" class="w-full h-full object-cover" />
+    <div class="relative w-full h-[40rem] overflow-hidden rounded-lg shadow-lg">
+        <img src="{{ asset('img/rootsofvissionary.jpg') }}" alt="Roots of a Visionary" class="w-full h-full object-cover" />
     </div>
 
     <!-- Descriptive Paragraphs -->
