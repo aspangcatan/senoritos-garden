@@ -9,6 +9,7 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
 <!-- Navbar -->
@@ -25,6 +26,13 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
 <script>
     function loadContent(url, push = true) {
         $('#loading').fadeIn();
@@ -35,7 +43,9 @@
             success: function (data) {
                 const newContent = $(data).find("#content").html();
                 $("#content").fadeOut(200, function () {
-                    $(this).html(newContent).fadeIn(200);
+                    $(this).html(newContent).fadeIn(200, function(){
+                        AOS.refresh(); // <-- re-trigger AOS after fade in
+                    });
                     history.pushState(null, "", url);
                     updateActiveNav();
                     // Re-run scripts or rebind things if needed

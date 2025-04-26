@@ -32,7 +32,7 @@
                 'home' => 'HOME',
                 'about' => 'ABOUT US',
                 'gallery' => 'GALLERY',
-                'services' => 'SERVICES',
+                'services' => 'AMENITIES',
                 'contact' => 'CONTACT',
             ];
         @endphp
@@ -73,6 +73,7 @@
             closeMobileMenu();
         }
     });
+    
 
     function closeMobileMenu() {
         mobileMenu.classList.add('hidden');
