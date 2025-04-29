@@ -30,7 +30,10 @@
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-    AOS.init();
+    // Initialize AOS once when the page loads
+    AOS.init({
+        once: true // or false if you want animations to happen every scroll
+    });
 </script>
 
 <script>
@@ -43,12 +46,15 @@
             success: function (data) {
                 const newContent = $(data).find("#content").html();
                 $("#content").fadeOut(200, function () {
-                    $(this).html(newContent).fadeIn(200, function(){
-                        AOS.refresh(); // <-- re-trigger AOS after fade in
+                    $(this).html(newContent).fadeIn(200, function () {
+                        // IMPORTANT: Re-initialize AOS after new content is shown
+                        AOS.init({
+                            once: true
+                        });
                     });
+
                     history.pushState(null, "", url);
                     updateActiveNav();
-                    // Re-run scripts or rebind things if needed
                 });
             },
             error: function () {

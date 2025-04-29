@@ -10,29 +10,7 @@
 
 <section id="hero" class="relative text-white bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('img/aboutus.jpg') }}')">
     <div class="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
-        <!-- Optional: Lighter or removed overlay -->
-        <!-- <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-black opacity-10"></div> -->
-
-        <!-- Optional: Softened SVG overlay -->
-        <!-- <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
-            <svg class="w-full h-full opacity-5" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="wave-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
-                        <path d="M0 50 Q25 0 50 50 T100 50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#wave-pattern)" />
-            </svg>
-        </div> -->
-
-        <!-- Optional: Re-enable heading if needed -->
-        <!--
-        <div class="relative z-10 text-center px-6">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide uppercase">
-                About Senorito's Garden
-            </h1>
-        </div>
-        -->
+     
     </div>
 </section>
 
